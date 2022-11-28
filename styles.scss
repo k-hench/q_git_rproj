@@ -1,0 +1,67 @@
+/*-- scss:defaults --*/
+// kh vraiables
+$clr-alert: #db4a32;
+$navbar-bg: #282828;
+
+// color defaults
+$body-bg: #f2f2f2;
+$body-color: #000;
+$link-color: $clr-alert;
+// callout boxes (seems not to be working in reveal)
+// $callout-color-note: $navbar-bg !important;
+// $callout-color-tip: #cccccc !important;
+// $callout-color-caution: $navbar-bg !important;
+// $callout-color-warning: $clr-alert !important;
+
+
+// fonts
+$font-family-sans-serif: "Josefin sans", sans  !default;
+
+// title page
+h1.title {
+  color: #fff !important;
+    }
+
+.quarto-title-author-name,
+p.author,
+p.date,
+p.institute {
+  color: #fff;
+    }
+    
+p.subtitle{
+  color: $clr-alert;
+    }
+
+a.authmail {
+  color: lighten($clr-alert, 10%);
+    }
+
+
+/*-- scss:rules --*/
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal h1,
+.reveal h2{
+   font-family: "Archistico", Impact, sans-serif;
+}
+
+.reveal h2{
+   color: $clr-alert;
+}
+
+#last,
+#last h2{
+   color: #fff;
+}
+
+.slide-number {
+  font-family: "Josefin sans" !important;
+}
+
+code {
+  font-size: 22pt;
+}

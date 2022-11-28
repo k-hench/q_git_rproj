@@ -1,0 +1,12 @@
+project:
+  title: "q_pres"
+
+editor: visual
+
+title-slide-attributes:
+  data-background-image: img/title3.svg
+  data-background-size: cover
+
+from: markdown+emoji
+
+highlight-style: printing

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" 
+viewBox="0 0 636 732" 
+preserveAspectRatio="xMidYMid meet">
+	<defs>
+		<style type="text/css"><![CDATA[
+			.hex {
+				stroke: #000000;
+				stroke-width: 10;
+				fill: #00000000;
+			}
+.hex .hexbg {
+filter:url(#f1);
+			}
+.hex {
+  stroke-linecap: butt;
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.hex:hover {
+  stroke: #3182bd;
+  stroke-width: 10;
+}
+		]]></style>
+    <filter id="f1"  x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+    </filter>
+	</defs>
+<g class="hex">
+        <polygon class="hexbg" points="313,661 573,511 573,211 313,61 53,211 53,511" />
+   <polygon  points="313,661 573,511 573,211 313,61 53,211 53,511" style="fill:white;stroke:black;stroke-width:10"/>
+</g>
+</svg>

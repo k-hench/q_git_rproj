@@ -1,0 +1,164 @@
+---
+title: "Git and RStudio projects"
+author: "Kosmas Hench"
+date: "`r Sys.Date()`"
+engine: knitr
+#institute: "test isnt"
+format:
+  revealjs: 
+    theme: [default, styles.scss] # night
+    slide-number: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Plug: reproducibility map
+
+Stations of increasing complexity along the quest for reproducible computing:
+
+![](img/maptest.png){.absolute top="30%" left="0%" width="100%"}
+
+::: {.fragment .fade-in-then-out}
+![](img/maptest2.png){.absolute top="30%" left="0%" width="100%"}
+:::
+
+## Project oriented workflow
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+::: {text-align="center"}
+[Version Control]{style="color:#be5740"}<br> *"track changes for folders"*, logging changes in file contents<br> ![](img/git.svg){top="25%" left="25%" width="50%"}
+:::
+:::
+
+::: {.column width="50%"}
+[RStudio Projects]{style="color:#486a9a"}<br> self contained coding, documenting the R environment<br> ![](img/rstudio.png){top="25%" left="25%" width="50%"}
+:::
+:::
+
+## On the ground {#files}
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_genesis_0.svg){.absolute top="25%" right="10%" width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_genesis_1.svg){.absolute top="25%" right="10%" width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_genesis_3.svg){.absolute top="25%" right="10%" width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_genesis_4.svg){.absolute top="25%" right="10%" width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_genesis_2.svg){.absolute top="25%" right="10%" width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_genesis.svg){.absolute top="25%" right="10%" width="80%"}
+:::
+
+::: {.fragment .fade-in-then-out}
+![](img/draw/project_full.svg){.absolute top="25%" right="35%" width="30%"}
+:::
+
+## Git and Github {#git background-image="img/delorean_white_hex.jpg"}
+
+::: columns
+::: {.fragment .fade-in-then-out}
+::: {.column width="50%"}
+[git]{style="color:#be5740"}
+
+-   snapshots of file content at certain time points
+-   tool for software dev.
+-   consider what to exclude
+
+[github]{style="color:#be5740"}
+
+-   mode of distribution
+-   nice (partial) backup
+:::
+:::
+:::
+
+##  {#intro background-image="img/rproj_white.jpg"}
+
+<!-- <img style="position:absolute; left:10%; top:250px; width:75%; transform: rotate(-30deg);" src="img/rprojects.svg"></a> -->
+
+::: {.fragment .fade-in-then-out}
+![](img/rprojects.svg){.absolute top="7%" left="-5%" width="73%"}
+:::
+
+::: columns
+::: {.fragment .fade-in-then-out}
+::: {.column width="55%"}
+*Aim: self-contained projects*
+
+-   clean slate<br>(avoid `rm(list = ls())`)
+-   `{here}` (avoid `setwd()`)
+-   `{renv}` (document R setup,<br>extends `sessionInfo()`)
+
+*Convenience: in RStudio*
+
+-   switch between projects
+-   `git` management
+:::
+:::
+:::
+
+## R Packages for Projects {#rpkgs}
+
+work without RStudio (eg. also in `RScript script.R`)
+
+::: columns
+::: {.column width="50%"}
+::: {style="margin-right:1.25em;"}
+{here}<br>
+
+`path\to\file.tsv`<br> `path/to/file.tsv`
+
+::: {.fragment .fade-in}
+`here("path","to","file.tsv")`
+:::
+
+::: {.fragment .fade-in}
+Consistent working directory (interactive vs. Rmarkdown)
+:::
+:::
+:::
+
+::: {.column width="47.5%"}
+::: {.fragment .fade-in-then-out}
+{renv}
+
+activate `{renv}`
+
+`renv::init()`
+
+write pkgs to `renv.lock`
+
+`renv::snapshot()`
+
+restore pkgs from `renv.lock`
+
+`renv::restore()`
+:::
+:::
+:::
+
+## Further reading {#last .unnumbered background-image="img/rproj_dark.jpg"}
+
+::: columns
+::: {.column width="50%"}
+-   [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) by Jenny Bryan
+-   [What they forget to teach you about R](https://rstats.wtf/project-oriented-workflow.html) by Jennifer Bryan and Jim Hester
+-   docs of [{renv}](https://rstudio.github.io/renv/articles/profiles.html) package
+-   docs of [{here}](https://here.r-lib.org/) package
+:::
+:::

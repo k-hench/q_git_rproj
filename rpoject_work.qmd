@@ -1,0 +1,192 @@
+---
+title: "RStudio Project worksheet"
+format:
+  html:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+css: work.css
+---
+
+```{r}
+#| include: false
+idx <- 0 
+```
+
+
+## Basic Setup
+
+`r idx<-idx+1;idx`​) Create Rproj `new_proj` from scratch
+
+$\rightarrow$ double check project indication in RStudio upper right corner
+
+![](img/work/indicate.png){width="10em"}
+
+---
+
+`r idx<-idx+1;idx`​)  Create some data - in console run:
+
+```{r}
+#| eval: false
+#| echo: true
+dir.create("data")
+write.csv(iris, file = "data/iris.csv")
+```
+
+$\rightarrow$ In finder, check that the csv file was created
+
+
+## {here} example
+
+`r idx<-idx+1;idx`​) Create a classic R script (`code/script.R`)
+
+```{r}
+#| eval: false
+#| echo: true
+#| error: true
+library(here)
+head(read.csv("data/iris.csv"), n = 5)
+
+(file_path <- here("data", "iris.csv"))
+head(read.csv(file_path), n = 5)
+```
+
+$\rightarrow$ run the script interactively in RStudio:
+
+ - note how `setwd()` is not needed
+ - note how tab complete works for strings / file-paths
+
+---
+
+`r idx<-idx+1;idx`​) Create a Rmarkdown file (`code/script.Rmd`)
+
+````
+​```{r}
+#| error: true
+library(here)
+head(read.csv("data/iris.csv"), n = 5)
+
+(file_path <- here("data", "iris.csv"))
+head(read.csv(file_path), n = 5)
+```
+````
+
+$\rightarrow$ knit document, look at error message
+
+## git demo in RStudio
+
+`r idx<-idx+1;idx`​) In *terminal* pane (not *console*!)
+
+```sh
+git init
+```
+
+$\rightarrow$ re-load project using the project indicator, lookout for apperance og the *git pane*
+
+$\rightarrow$ Interactively commit changes ("init")
+
+
+## {renv} example
+
+`r idx<-idx+1;idx`​) Start using {renv} within the project
+
+```{r}
+#| eval: false
+#| echo:  true
+renv::activate()
+```
+
+$\rightarrow$ check git tab (note new folder `renv/` and file `.Rprofile`)
+
+$\rightarrow$ inspect `.Rprofile`:
+
+```
+source("renv/activate.R")
+```
+
+---
+
+`r idx<-idx+1;idx`​) Save currently used packages ({here})
+
+```{r}
+#| eval: false
+#| echo:  true
+renv::snapshot()
+```
+
+```
+The following package(s) will be updated in the lockfile:
+
+# CRAN ===============================
+- renv   [* -> 0.15.4]
+Do you want to proceed? [y/N]: y
+* Lockfile written to '~/Desktop/new_proj/renv.lock'.
+```
+
+$\rightarrow$ check git tab (note new file `renv.lock`)
+
+$\rightarrow$ inspect `renv.lock`:
+
+```
+{
+  "R": {
+    "Version": "4.2.2",
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://cloud.r-project.org"
+      }
+    ]
+  },
+  "Packages": {
+    "renv": {
+      "Package": "renv",
+      "Version": "0.15.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c1078316e1d4f70275fc1ea60c0bc431",
+      "Requirements": []
+    }
+  }
+}
+```
+
+---
+
+`r idx<-idx+1;idx`​) re-load project using the project indicator, open `script.Rmd` file
+
+![](img/work/renv_note.png){width="25em"}
+
+$\rightarrow$ click *install* (or just run `install.packages(c("rmarkdown", "here"))`)
+
+---
+
+`r idx<-idx+1;idx`​) Save new packages to `renv.lock`, similar like before:
+
+```{r}
+#| eval: false
+#| echo:  true
+renv::snapshot()
+```
+
+$\rightarrow$ re-inspect `renv.lock`, note how it was extended
+
+---
+
+`r idx<-idx+1;idx`​) For completeness, this is how to restore a saved {renv} environment:
+
+```{r}
+#| eval: false
+#| echo:  true
+renv::restore()
+```
+
+```
+* The library is already synchronized with the lockfile.
+```
+
+---
+
+::: {.emo}
+🎉🎉🎉
+:::

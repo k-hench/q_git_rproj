@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30.342916in"
+   height="34.373737in"
+   viewBox="0 0 3034.2917 3437.3736"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="shadow_hex.svg"
+   inkscape:export-filename="/home/khench/Schreibtisch/PhD/data/images/hypoSymb2/logos/hypoimg.png"
+   inkscape:export-xdpi="9.21"
+   inkscape:export-ydpi="9.21">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="0.18081039"
+     inkscape:cx="2833.9743"
+     inkscape:cy="1421.3542"
+     inkscape:window-x="1366"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2" />
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7">
+    <style
+       type="text/css"
+       id="style4286"><![CDATA[
+    line, polyline, polygon, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+polygon .hex {
+				stroke: #909;
+				stroke-width: 10;
+				fill: #f6f;
+			}
+polygon #polygon4142 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  stroke-linecap: butt;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+polygon #polygon4142 {
+  fill: pink;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 700;
+  stroke-width: 10;
+}
+    ]]></style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4145"
+       x="-0.12927495"
+       width="1.2585499"
+       y="-0.11195597"
+       height="1.2239119">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="22.953306"
+         id="feGaussianBlur4147" />
+    </filter>
+  </defs>
+  <polygon
+     transform="matrix(6.0253361,0,0,6.0165634,104.95773,-395.38336)"
+     points="234.38,105.35 447.44,228.36 447.44,474.39 234.38,597.4 21.31,474.39 21.31,228.36 "
+     clip-path="url(#cpMC4wMHw0NjguNzV8NjIyLjAxfDgwLjc0)"
+     id="polygon4142" class="hex"/>
+  <polygon
+     id="polygon4295"
+     clip-path="url(#cpMC4wMHw0NjguNzV8NjIyLjAxfDgwLjc0)"
+     points="234.38,105.35 447.44,228.36 447.44,474.39 234.38,597.4 21.31,474.39 21.31,228.36 "
+     transform="matrix(6.0253361,0,0,6.0165634,104.95773,-395.38336)" class="hex"/>
+  <path
+     inkscape:connector-curvature="0"
+     clip-path="url(#cpMC4wMHw0NjguNzV8NjIyLjAxfDgwLjc0)"
+     d="M 1517.176,3198.9116 2800.9341,2458.8142"
+     id="polygon4315" class="hex"/>
+</svg>
