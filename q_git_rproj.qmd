@@ -160,5 +160,7 @@ restore pkgs from `renv.lock`
 -   [What they forget to teach you about R](https://rstats.wtf/project-oriented-workflow.html) by Jennifer Bryan and Jim Hester
 -   docs of [{renv}](https://rstudio.github.io/renv/articles/profiles.html) package
 -   docs of [{here}](https://here.r-lib.org/) package
+- [rproj workshop part](https://k-hench.github.io/q_git_rproj/%20rpoject_work.html)
+- [git workshop part](https://k-hench.github.io/git/git_work.html)
 :::
 :::
